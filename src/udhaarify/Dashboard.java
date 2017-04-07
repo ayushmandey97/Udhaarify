@@ -132,7 +132,6 @@ public class Dashboard extends javax.swing.JFrame {
                 jComboBox1.addItem(rs1.getString(1));
             }
         } catch (SQLException ex) {
-            System.out.println("select username from user where username not in (select friend_username from friend where username = '"+LoginPage.username+"' UNION select username from friend where friend_username = '"+LoginPage.username+"')");
             JOptionPane.showMessageDialog(null, "Database error");
             Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
         }

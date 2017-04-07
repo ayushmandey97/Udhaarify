@@ -173,7 +173,6 @@ public class LoginPage extends javax.swing.JFrame {
             hint = rs.getString(1);
             JOptionPane.showMessageDialog(null, "HINT: " + hint);        // TODO add your handling code here:
         } catch (SQLException ex) {
-            System.out.println("Exception found");
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -209,8 +208,6 @@ public class LoginPage extends javax.swing.JFrame {
             else
             JOptionPane.showMessageDialog(null,"Username/password entered is wrong, retry!");
         } catch (SQLException ex) {
-            System.out.println("Exception found");
-            ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

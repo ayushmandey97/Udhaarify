@@ -284,11 +284,9 @@ public class RegisterUser extends javax.swing.JFrame {
             new LoginPage().setVisible(true);
                 }
         catch (SQLIntegrityConstraintViolationException e){
-            System.out.println("Duplicate entry");
         
         }
         catch(Exception e1){
-            System.out.println("Unsuccessful");
             JOptionPane.showMessageDialog(null, "User already exists");
             //System.out.println("insert into user values('"+username+"','"+name+"',"+phone+",'"+email+"','"+password+"','"+pass_hint+"')");
             e1.printStackTrace();

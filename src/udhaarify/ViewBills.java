@@ -328,7 +328,6 @@ public class ViewBills extends javax.swing.JFrame {
             return;
         }
         try {
-            System.out.println("Here!");
             bill_id = jComboBox1.getSelectedItem().toString();
             get_bill_info = "select * from bill natural join bill_members where bill_id = ? and username = ? ";
             PreparedStatement st1 = MySQLConnection.getConnection().prepareStatement(get_bill_info);
@@ -352,7 +351,6 @@ public class ViewBills extends javax.swing.JFrame {
         
         try{
         String memberdata = "select * from bill_members where bill_id = ? ";
-        System.out.println("Here too!");
         PreparedStatement st2 = MySQLConnection.getConnection().prepareStatement(memberdata);
         st2.setString(1, bill_id);
         ResultSet rs1 = st2.executeQuery();
@@ -369,7 +367,6 @@ public class ViewBills extends javax.swing.JFrame {
         while(rs2.next()){
             billPayers[j]=rs2.getString(2);
             billPayers_amount[j]=rs2.getString(3);
-            System.out.println(billPayers[j] + "   " + billPayers_amount[j]);
             j++;
         }
         jList2.setListData(bill_members);
