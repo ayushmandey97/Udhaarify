@@ -87,8 +87,7 @@ public class AddABill extends javax.swing.JFrame {
                 jComboBox1.addItem(rs.getString(1));
             }
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error in fetching data");
-            Logger.getLogger(AddABill.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(AddABill.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         //final_string = new String[100];
@@ -1363,6 +1362,7 @@ int x;
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new AddABill().setVisible(true);
+                
             }
         });
     }
